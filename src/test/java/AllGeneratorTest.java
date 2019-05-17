@@ -9,10 +9,7 @@ public class AllGeneratorTest extends GeneratorTestHelpers {
       AllGenerator ag = new AllGenerator(i);
       Set<BigInteger> results = exhaustGeneratorAssertSize(ag, 20);
       final int nDigits = i;
-      results.forEach(
-          (bi) -> {
-            assertEquals(nDigits, bi.toString().length());
-          });
+      results.forEach((bi) -> assertEquals(nDigits, bi.toString().length()));
     }
   }
 }

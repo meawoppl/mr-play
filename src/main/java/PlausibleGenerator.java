@@ -7,11 +7,10 @@ public abstract class PlausibleGenerator implements Iterator<BigInteger> {
   abstract int size();
 
   Stream<BigInteger> toParallelStream() {
+    int properties =
+        Spliterator.NONNULL | Spliterator.SIZED | Spliterator.SORTED | Spliterator.DISTINCT;
     Stream<BigInteger> p =
-        StreamSupport.stream(
-            Spliterators.spliterator(
-                this, this.size(), Spliterator.NONNULL | Spliterator.CONCURRENT),
-            false);
+        StreamSupport.stream(Spliterators.spliterator(this, this.size(), properties), false);
     return p.parallel().unordered();
   }
 

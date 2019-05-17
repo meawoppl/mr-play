@@ -9,14 +9,14 @@ public class Results {
     System.out.println(formatResults(results));
   }
 
-  public static String formatResults(Map<BigInteger, Integer> results){
+  public static String formatResults(Map<BigInteger, Integer> results) {
     StringBuilder sb = new StringBuilder();
 
     Map<Integer, List<BigInteger>> mapping = groupedOnValue(results);
 
     Integer highest = mapping.keySet().stream().max(Integer::compareTo).orElse(0);
 
-    if(results.isEmpty()){
+    if (results.isEmpty()) {
       sb.append("None Found.\n");
     }
 
@@ -25,10 +25,15 @@ public class Results {
       sb.append("========\n");
       sb.append(String.format("%d (%d)\n", i, mapping.get(i).size()));
       sb.append("========\n");
-      mapping.get(i).stream().sorted().forEach((bi) -> {
-        sb.append(bi.toString());
-        sb.append("\n");
-      });
+      mapping
+          .get(i)
+          .stream()
+          .sorted()
+          .forEach(
+              (bi) -> {
+                sb.append(bi.toString());
+                sb.append("\n");
+              });
 
       sb.append("\n");
     }
