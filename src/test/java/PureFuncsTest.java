@@ -35,7 +35,7 @@ public class PureFuncsTest {
 
   @Test
   public void testMultTrick() {
-      // Two #9's become 4 #3's
+    // Two #9's become 4 #3's
     Assert.assertEquals(
         PureFuncs.computeMultiplicativeResistance(277777788888899L),
         PureFuncs.computeMultiplicativeResistance(23333777777888888L));
@@ -73,5 +73,12 @@ public class PureFuncsTest {
     assertNotEquals(
         12,
         PureFuncs.computeMultiplicativeResistance(new BigInteger("55555555555555557777777777777")));
+  }
+
+  @Test
+  public void testNCharsOf() {
+    assertEquals("", PureFuncs.nCharactersOf(5, ""));
+
+    assertEquals("aaaaa", PureFuncs.nCharactersOf(5, "a"));
   }
 }

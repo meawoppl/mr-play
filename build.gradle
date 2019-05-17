@@ -1,5 +1,6 @@
 plugins {
     id "com.diffplug.gradle.spotless" version "3.23.0"
+    id "org.jetbrains.intellij" version "0.4.8"
 }
 
 // Apply the java-library plugin to add support for Java Library
@@ -9,6 +10,12 @@ apply plugin: 'java-library'
 repositories {
     jcenter()
 }
+
+//sourceControl {
+//    gitRepository("git@github.com:meawoppl/progressbar.git") {
+//        producesModule("me.tongfei:progressbar")
+//    }
+//}
 
 dependencies {
     // This dependency is exported to consumers, that is to say found on their compile classpath.
@@ -22,6 +29,9 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.apache.commons/commons-math3
     compile group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
+
+    // Patched in personal repo.  See settings.gradle
+    implementation 'me.tongfei:progressbar:0.7.3'
 }
 
 spotless {
@@ -32,3 +42,5 @@ spotless {
         replaceRegex 'Bug in google format javadoc: https://github.com/google/google-java-format/issues/254', '  \\* (<p>)+', '  * <p>'
     }
 }
+
+apply plugin: 'org.jetbrains.intellij'

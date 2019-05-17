@@ -1,4 +1,4 @@
-import java.util.Iterator;
+import java.math.BigInteger;
 
 /**
  * This is a class that generate the ordered combinations of 789 compositions of size equal to
@@ -7,19 +7,27 @@ import java.util.Iterator;
  * <p>Basically, the number of nines is equal to nDigits - (#7's + #8's) The number of 7's and 8's
  * is searched as an upper diagonal matrix including the trace
  */
-public class SENGenerator implements Iterator<Plausible> {
+public class SENGenerator extends PlausibleGenerator {
   private final int nDigits;
+  private final String prefix;
+
   private int s = 0;
   private int e = 0;
 
-  public SENGenerator(int nDigits) {
+  public SENGenerator(String prefix, int nDigits) {
+    assert (nDigits > 0 || !prefix.equals(""));
     this.nDigits = nDigits;
+    this.prefix = prefix;
+  }
+
+  public SENGenerator(int nDigits) {
+    this("", nDigits);
   }
 
   @Override
-  public Plausible next() {
+  public BigInteger next() {
     int n = nDigits - (s + e);
-    Plausible p = new Plausible(s, e, n);
+    SENPlausible p = new SENPlausible(prefix, s, e, n);
 
     e += 1;
     if ((s + e) > nDigits) {
@@ -27,11 +35,16 @@ public class SENGenerator implements Iterator<Plausible> {
       e = 0;
     }
 
-    return p;
+    return p.asBigInteger();
   }
 
   @Override
   public boolean hasNext() {
     return (s <= nDigits);
+  }
+
+  @Override
+  public int size() {
+    return ((nDigits + 1) * (nDigits + 2)) / 2;
   }
 }

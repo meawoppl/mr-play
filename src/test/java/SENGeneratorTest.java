@@ -1,53 +1,38 @@
+import java.math.BigInteger;
 import java.util.*;
-import java.util.stream.StreamSupport;
-import junit.framework.TestCase;
 import org.junit.Test;
 
-public class SENGeneratorTest extends TestCase {
-  private <T> Set<T> exhaustGenerator(Iterator<T> gen) {
-    HashSet<T> set = new HashSet<>();
-    gen.forEachRemaining(set::add);
-    return set;
-  }
-
+public class SENGeneratorTest extends GeneratorTestHelpers {
   @Test
   public void testGenerationSingleDigit() {
     SENGenerator pg = new SENGenerator(1);
-    Set<Plausible> things = exhaustGenerator(pg);
-    assertEquals(3, things.size());
+    exhaustGeneratorAssertSize(pg, 3);
   }
 
   @Test
   public void testGenerationDoubleDigit() {
     SENGenerator pg = new SENGenerator(2);
-    Set<Plausible> things = exhaustGenerator(pg);
-    assertEquals(6, things.size());
+    exhaustGeneratorAssertSize(pg, 6);
   }
 
   @Test
-  public void testGenerationNSize() {
+  public void testGenerationNSizeMath() {
     for (int i = 3; i < 50; i++) {
       SENGenerator pg = new SENGenerator(i);
-      Set<Plausible> things = exhaustGenerator(pg);
-      int udSize = ((i + 1) * (i + 2)) / 2;
-      assertEquals(udSize, things.size());
+      // Make sure the size math is right
+      int expectedSize = ((i + 1) * (i + 2)) / 2;
+      assertEquals(expectedSize, pg.size());
+
+      // Make sure the generator produces that many things.
+      exhaustGeneratorAssertSize(pg, expectedSize);
     }
   }
 
   @Test
-  public void testDoTheSearch() {
-    SENGenerator pg = new SENGenerator(1000);
-    StreamSupport.stream(Spliterators.spliteratorUnknownSize(pg, Spliterator.ORDERED), false)
-        .parallel()
-        .filter((p) -> PureFuncs.computeMultiplicativeResistance(p.asBigInteger()) > 3)
-        .forEachOrdered(
-            (p) -> {
-              System.out.println(
-                  String.format(
-                      "%s - %d",
-                      p.asBigInteger().toString(),
-                      PureFuncs.computeMultiplicativeResistance(p.asBigInteger())));
-            });
-    assert (false);
+  public void testPrefixNullGen() {
+    SENGenerator pg = new SENGenerator("1", 0);
+    Set<BigInteger> things = exhaustGeneratorAssertSize(pg, 1);
+    assertEquals(1, things.size());
+    assertEquals(things.toArray()[0], new BigInteger("1"));
   }
 }

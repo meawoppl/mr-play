@@ -8,6 +8,10 @@ public class PureFuncs {
     return new String(chars);
   }
 
+  public static String toMinimalForm(BigInteger bi) {
+    return "";
+  }
+
   public static int computeMultiplicativeResistance(long value) {
     return computeMultiplicativeResistance(Long.toString(value));
   }
@@ -35,6 +39,16 @@ public class PureFuncs {
     }
 
     return values;
+  }
+
+  public static String nCharactersOf(int n, String s) {
+    StringBuilder sb = new StringBuilder();
+
+    for (int i = 0; i < n; i++) {
+      sb.append(s);
+    }
+
+    return sb.toString();
   }
 
   public static BigInteger product(int[] ints) {
