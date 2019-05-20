@@ -2,43 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caea2e7a-ab29-4bd7-80a3-6cd00af9d170" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mpersist/MiningEntryPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mpersist/Persistence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mpersist/forms/DigitForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mpersist/forms/DigitalBigInteger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mpersist/rules/Rules.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mpersist/rules/SortRule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mpersist/rules/ZeroRule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mpersist/rules/base/MatchingRule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mpersist/rules/base/ReplacementRule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mpersist/rules/base/Rule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mpersist/rules/base/RuleAnnotation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mpersist/rules/base/TerminationRule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/mpersist/PersistenceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/mpersist/forms/DigitFormTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/mpersist/forms/DigitalBigIntegerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/mpersist/rules/OneRuleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/mpersist/rules/RulesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AllGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mpersist/generators/AllGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ConcatGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mpersist/generators/ConcatGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EntryPoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FiveGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mpersist/generators/FiveGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PlausibleGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mpersist/generators/PlausibleGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PureFuncs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mpersist/PureFuncs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Results.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mpersist/Results.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SENGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mpersist/generators/SENGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SENPlausible.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mpersist/forms/SENPlausible.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AllGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mpersist/generators/AllGeneratorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GeneratorTestHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mpersist/generators/GeneratorTestHelpers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PlausibleGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mpersist/generators/PlausibleGeneratorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PureFuncsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mpersist/PureFuncsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ResultsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mpersist/ResultsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SENGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mpersist/generators/SENGeneratorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SENPlausibleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mpersist/forms/SENPlausibleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mpersist/Persistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mpersist/Persistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mpersist/PureFuncs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mpersist/PureFuncs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mpersist/forms/DigitalBigInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mpersist/forms/DigitalBigInteger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mpersist/rules/SortRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mpersist/rules/SortRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mpersist/rules/base/MatchingRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mpersist/rules/base/MatchingRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mpersist/rules/base/ReplacementRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mpersist/rules/base/ReplacementRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mpersist/PersistenceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mpersist/PersistenceTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -74,8 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/forms/DigitalBigInteger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="95" selection-start-line="95" selection-end-line="95" />
+            <state relative-caret-position="420">
+              <caret line="113" column="3" lean-forward="true" selection-start-line="113" selection-start-column="3" selection-end-line="113" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#301#302#0" expanded="true" />
@@ -84,6 +54,16 @@
                 <element signature="e#412#413#0" expanded="true" />
                 <element signature="e#470#471#0" expanded="true" />
                 <element signature="e#502#503#0" expanded="true" />
+                <element signature="e#619#620#0" expanded="true" />
+                <element signature="e#633#634#0" expanded="true" />
+                <element signature="e#1723#1724#0" expanded="true" />
+                <element signature="e#1773#1774#0" expanded="true" />
+                <element signature="e#1828#1829#0" expanded="true" />
+                <element signature="e#1853#1854#0" expanded="true" />
+                <element signature="e#1866#1867#0" expanded="true" />
+                <element signature="e#1899#1900#0" expanded="true" />
+                <element signature="e#2780#2781#0" expanded="true" />
+                <element signature="e#2846#2847#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,9 +84,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/Persistence.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+            <state relative-caret-position="510">
+              <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#144#145#0" expanded="true" />
                 <element signature="e#190#191#0" expanded="true" />
                 <element signature="e#491#492#0" expanded="true" />
@@ -116,11 +97,50 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/mpersist/PersistenceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="62" column="27" lean-forward="true" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/Results.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="28" column="30" lean-forward="true" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+              <folding>
+                <element signature="e#220#221#0" expanded="true" />
+                <element signature="e#272#273#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/PureFuncs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+            <state relative-caret-position="435">
+              <caret line="86" column="20" lean-forward="true" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#634#635#0" expanded="true" />
+                <element signature="e#699#700#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/rules/base/MatchingRule.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,63 +160,27 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/forms/DigitForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="6" column="22" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#832#833#0" expanded="true" />
+                <element signature="e#866#867#0" expanded="true" />
+                <element signature="e#1046#1047#0" expanded="true" />
+                <element signature="e#1092#1093#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/rules/OneRule.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
               <caret line="22" column="85" lean-forward="true" selection-start-line="22" selection-start-column="85" selection-end-line="22" selection-end-column="85" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/mpersist/generators/AllGeneratorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/mpersist/generators/PlausibleGeneratorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-300">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-              <folding>
-                <element signature="e#426#427#0" expanded="true" />
-                <element signature="e#450#451#0" expanded="true" />
-                <element signature="e#489#490#0" expanded="true" />
-                <element signature="e#511#512#0" expanded="true" />
-                <element signature="e#557#558#0" expanded="true" />
-                <element signature="e#594#595#0" expanded="true" />
-                <element signature="e#640#641#0" expanded="true" />
-                <element signature="e#700#701#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/mpersist/generators/SENGeneratorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -226,6 +210,8 @@
       <find>testTes</find>
       <find>TestCase</find>
       <find>testToSe</find>
+      <find>stringToIntElements</find>
+      <find>DigitForm</find>
     </findStrings>
     <replaceStrings>
       <replace>rule</replace>
@@ -268,13 +254,10 @@
         <option value="$PROJECT_DIR$/src/main/java/mpersist/rules/base/MatchingRule.java" />
         <option value="$PROJECT_DIR$/src/main/java/mpersist/rules/base/TerminationRule.java" />
         <option value="$PROJECT_DIR$/src/main/java/mpersist/rules/base/ReplacementRule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mpersist/PureFuncs.java" />
         <option value="$PROJECT_DIR$/src/test/java/mpersist/Persistence.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mpersist/Persistence.java" />
         <option value="$PROJECT_DIR$/src/main/java/mpersist/rules/base/Rule.java" />
         <option value="$PROJECT_DIR$/src/main/java/mpersist/rules/ZeroRule.java" />
         <option value="$PROJECT_DIR$/src/main/java/mpersist/rules/Rules.java" />
-        <option value="$PROJECT_DIR$/src/test/java/mpersist/PersistenceTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/mpersist/PureFuncsTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/mpersist/rules/OneRuleTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/mpersist/forms/SENPlausibleTest.java" />
@@ -285,10 +268,13 @@
         <option value="$PROJECT_DIR$/src/test/java/mpersist/generators/GeneratorTestHelpers.java" />
         <option value="$PROJECT_DIR$/src/test/java/mpersist/generators/PlausibleGeneratorTest.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/mpersist/forms/DigitalBigInteger.java" />
         <option value="$PROJECT_DIR$/src/main/java/mpersist/rules/SortRule.java" />
         <option value="$PROJECT_DIR$/src/main/java/mpersist/rules/OneRule.java" />
         <option value="$PROJECT_DIR$/src/test/java/mpersist/rules/RulesTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mpersist/Persistence.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mpersist/PureFuncs.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mpersist/forms/DigitalBigInteger.java" />
+        <option value="$PROJECT_DIR$/src/test/java/mpersist/PersistenceTest.java" />
       </list>
     </option>
   </component>
@@ -439,7 +425,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.RulesTest.testRuleApplicationPreservesPersistence">
+  <component name="RunManager" selected="Gradle.PersistenceTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -466,12 +452,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PlausibleGeneratorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PersistenceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;mpersist.generators.PlausibleGeneratorTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;mpersist.PersistenceTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -486,12 +472,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="RulesTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PlausibleGeneratorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;mpersist.rules.RulesTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;mpersist.generators.PlausibleGeneratorTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -623,19 +609,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.RulesTest" />
       <item itemvalue="Gradle.PlausibleGeneratorTest" />
       <item itemvalue="Gradle.GeneratorTestHelpers.testExhaustGeneratorAssertSize" />
       <item itemvalue="Gradle.SENGeneratorTest" />
       <item itemvalue="Gradle.RulesTest.testRuleApplicationPreservesPersistence" />
+      <item itemvalue="Gradle.PersistenceTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.PersistenceTest" />
         <item itemvalue="Gradle.RulesTest.testRuleApplicationPreservesPersistence" />
         <item itemvalue="Gradle.SENGeneratorTest" />
         <item itemvalue="Gradle.PlausibleGeneratorTest" />
         <item itemvalue="Gradle.GeneratorTestHelpers.testExhaustGeneratorAssertSize" />
-        <item itemvalue="Gradle.RulesTest" />
       </list>
     </recent_temporary>
   </component>
@@ -653,15 +639,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SENGeneratorTest - 2019.05.19 at 16h 27m 40s.xml">
-      <configuration name="SENGeneratorTest" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="SENGeneratorTest - 2019.05.19 at 16h 27m 55s.xml">
-      <configuration name="SENGeneratorTest" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="SENGeneratorTest - 2019.05.19 at 16h 28m 34s.xml">
-      <configuration name="SENGeneratorTest" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="SENGeneratorTest - 2019.05.19 at 16h 29m 43s.xml">
       <configuration name="SENGeneratorTest" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -682,6 +659,15 @@
     </history-entry>
     <history-entry file="RulesTest_testRuleApplicationPreservesPersistence - 2019.05.19 at 16h 57m 20s.xml">
       <configuration name="RulesTest.testRuleApplicationPreservesPersistence" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="RulesTest_testRuleApplicationPreservesPersistence - 2019.05.19 at 17h 28m 09s.xml">
+      <configuration name="RulesTest.testRuleApplicationPreservesPersistence" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="PersistenceTest - 2019.05.19 at 17h 28m 25s.xml">
+      <configuration name="PersistenceTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="PersistenceTest - 2019.05.19 at 17h 28m 33s.xml">
+      <configuration name="PersistenceTest" configurationId="GradleRunConfiguration" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -789,16 +775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/Results.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#220#221#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/generators/SENGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -863,20 +839,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build/reports/tests/test/index.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/forms/DigitForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#832#833#0" expanded="true" />
-            <element signature="e#866#867#0" expanded="true" />
-            <element signature="e#1046#1047#0" expanded="true" />
-            <element signature="e#1092#1093#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/rules/base/RuleAnnotation.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -976,16 +938,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/rules/base/MatchingRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="45" column="2" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/rules/ZeroRule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1006,16 +958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/mpersist/PersistenceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="72" column="3" lean-forward="true" selection-start-line="72" selection-start-column="3" selection-end-line="72" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1126,36 +1068,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/forms/DigitalBigInteger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#301#302#0" expanded="true" />
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#470#471#0" expanded="true" />
-            <element signature="e#502#503#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/rules/SortRule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="20" selection-start-line="19" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/rules/OneRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" column="85" lean-forward="true" selection-start-line="22" selection-start-column="85" selection-end-line="22" selection-end-column="85" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1172,11 +1088,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/Persistence.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/rules/base/MatchingRule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/rules/OneRule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+          <caret line="22" column="85" lean-forward="true" selection-start-line="22" selection-start-column="85" selection-end-line="22" selection-end-column="85" />
           <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/forms/DigitalBigInteger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="113" column="3" lean-forward="true" selection-start-line="113" selection-start-column="3" selection-end-line="113" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#324#325#0" expanded="true" />
+            <element signature="e#369#370#0" expanded="true" />
+            <element signature="e#412#413#0" expanded="true" />
+            <element signature="e#470#471#0" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#619#620#0" expanded="true" />
+            <element signature="e#633#634#0" expanded="true" />
+            <element signature="e#1723#1724#0" expanded="true" />
+            <element signature="e#1773#1774#0" expanded="true" />
+            <element signature="e#1828#1829#0" expanded="true" />
+            <element signature="e#1853#1854#0" expanded="true" />
+            <element signature="e#1866#1867#0" expanded="true" />
+            <element signature="e#1899#1900#0" expanded="true" />
+            <element signature="e#2780#2781#0" expanded="true" />
+            <element signature="e#2846#2847#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/PureFuncs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="86" column="20" lean-forward="true" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#634#635#0" expanded="true" />
+            <element signature="e#699#700#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/Persistence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#144#145#0" expanded="true" />
             <element signature="e#190#191#0" expanded="true" />
             <element signature="e#491#492#0" expanded="true" />
@@ -1185,12 +1160,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/PureFuncs.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/mpersist/PersistenceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+        <state relative-caret-position="420">
+          <caret line="62" column="27" lean-forward="true" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/Results.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="28" column="30" lean-forward="true" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+          <folding>
+            <element signature="e#220#221#0" expanded="true" />
+            <element signature="e#272#273#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mpersist/forms/DigitForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#1046#1047#0" expanded="true" />
+            <element signature="e#1092#1093#0" expanded="true" />
           </folding>
         </state>
       </provider>

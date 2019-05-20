@@ -1,5 +1,7 @@
 package mpersist;
 
+import mpersist.forms.DigitalBigInteger;
+
 import java.math.BigInteger;
 
 public class Persistence {
@@ -22,5 +24,16 @@ public class Persistence {
 
   public static int compute(BigInteger value) {
     return compute(value.toString());
+  }
+
+  public static int compute(DigitalBigInteger value){
+    if (value.nDigits() == 1) {
+      return 0;
+    }
+
+    int[] digits = value.getDigitArray();
+    BigInteger newValue = PureFuncs.product(digits);
+
+    return compute(newValue) + 1;
   }
 }

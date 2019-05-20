@@ -45,7 +45,7 @@ public abstract class MatchingRule extends Rule {
 
   @Override
   protected boolean appliesImpl(DigitalBigInteger digitalBigInteger) {
-    int[] transformed = applyTransform(digitalBigInteger.getDigitArray());
+    int[] transformed = applyTransform(digitalBigInteger.getDigitHistorgram());
     for (int t : transformed) {
       if (t < 0) {
         return false;

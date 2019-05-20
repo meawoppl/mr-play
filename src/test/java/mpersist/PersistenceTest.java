@@ -60,7 +60,7 @@ public class PersistenceTest {
 
   @Test
   public void testManyNines() {
-    for (int i = 1; i < 1000; i++) {
+    for (int i = 1; i < 100; i++) {
       String trial = String.join("", Collections.nCopies(i, "9"));
       Persistence.compute(trial);
     }

@@ -15,6 +15,6 @@ public class ReplacementRule extends MatchingRule {
 
   @Override
   protected DigitalBigInteger applyImpl(DigitalBigInteger digitalBigInteger) {
-    return new DigitalBigInteger(applyTransform(digitalBigInteger.getDigitArray()));
+    return new DigitalBigInteger(applyTransform(digitalBigInteger.getDigitHistorgram()));
   }
 }

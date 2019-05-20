@@ -3,7 +3,7 @@ package mpersist.rules;
 import mpersist.forms.DigitalBigInteger;
 import mpersist.rules.base.Rule;
 
-public class SortRule extends Rule {
+public class OneRule extends Rule {
   @Override
   public boolean isTerminal() {
     return false;
@@ -12,6 +12,7 @@ public class SortRule extends Rule {
   @Override
   protected DigitalBigInteger applyImpl(DigitalBigInteger digitalBigInteger) {
     int[] digits = digitalBigInteger.getDigitHistorgram();
+    digits[1] -= 1;
     return new DigitalBigInteger(digits);
   }
 
@@ -19,6 +20,6 @@ public class SortRule extends Rule {
   protected boolean appliesImpl(DigitalBigInteger digitalBigInteger) {
     if (digitalBigInteger.containsZeros()) return false;
 
-    return !applyImpl(digitalBigInteger).equals(digitalBigInteger);
+    return (digitalBigInteger.nOfDigit(1)) != 0 && (digitalBigInteger.nDigits() > 1);
   }
 }

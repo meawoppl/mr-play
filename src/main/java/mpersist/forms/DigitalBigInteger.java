@@ -7,6 +7,8 @@ import mpersist.PureFuncs;
 import org.apache.commons.lang.StringUtils;
 
 public class DigitalBigInteger extends BigInteger {
+  public static DigitalBigInteger ONE = new DigitalBigInteger("1");
+
   public DigitalBigInteger(String number) {
     super(number);
   }
@@ -17,6 +19,10 @@ public class DigitalBigInteger extends BigInteger {
 
   public DigitalBigInteger(int bitSize, Random random) {
     super(bitSize, random);
+  }
+
+  public DigitalBigInteger(BigInteger bi){
+    super(bi.toString());
   }
 
   public static DigitalBigInteger fromValue(long value) {
@@ -59,11 +65,20 @@ public class DigitalBigInteger extends BigInteger {
   }
 
   public int nDigits() {
+    // TODO(meawoppl) also faster with above todo addressed.
     assert (signum() >= 0);
     return toString().length();
   }
 
-  public int[] getDigitArray() {
+  public int[] getDigitArray(){
+    return PureFuncs.stringToIntElements(toString());
+  }
+
+  public DigitalBigInteger getDigitProduct(){
+    return PureFuncs.product(getDigitArray());
+  }
+
+  public int[] getDigitHistorgram() {
     int[] digits = new int[10];
     for (int i = 0; i < digits.length; i++) {
       digits[i] = nOfDigit(i);
@@ -78,7 +93,7 @@ public class DigitalBigInteger extends BigInteger {
   public DigitalBigInteger incrementDigit(int digit, int increment) {
     assertValidDigit(digit);
 
-    int[] digits = getDigitArray();
+    int[] digits = getDigitHistorgram();
     digits[digit] += increment;
 
     return new DigitalBigInteger(digits);
@@ -88,9 +103,15 @@ public class DigitalBigInteger extends BigInteger {
     assertValidDigit(digit);
     assert (value >= 0);
 
-    int[] digits = getDigitArray();
+    int[] digits = getDigitHistorgram();
     digits[digit] = value;
 
     return new DigitalBigInteger(digits);
   }
+
+  public DigitalBigInteger multiply(BigInteger bigInteger) {
+    return new DigitalBigInteger(bigInteger.multiply(this));
+  }
 }
+
+
