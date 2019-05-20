@@ -1,4 +1,7 @@
+package mpersist.generators;
+
 import java.math.BigInteger;
+import mpersist.forms.SENPlausible;
 
 /**
  * This is a class that generate the ordered combinations of 789 compositions of size equal to

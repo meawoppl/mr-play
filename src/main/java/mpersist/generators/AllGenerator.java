@@ -1,3 +1,5 @@
+package mpersist.generators;
+
 import java.math.BigInteger;
 
 public class AllGenerator extends PlausibleGenerator {
@@ -20,7 +22,7 @@ public class AllGenerator extends PlausibleGenerator {
   }
 
   @Override
-  int size() {
+  public int size() {
     return base.size();
   }
 

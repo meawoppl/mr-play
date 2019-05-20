@@ -1,3 +1,5 @@
+package mpersist.generators;
+
 import com.google.common.collect.Iterators;
 import java.math.BigInteger;
 import java.util.Collections;
@@ -25,7 +27,7 @@ public class ConcatGenerator extends PlausibleGenerator {
   }
 
   @Override
-  int size() {
+  public int size() {
     return size;
   }
 }

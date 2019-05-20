@@ -24,14 +24,17 @@ dependencies {
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation 'com.google.guava:guava:23.0'
 
-    // Use JUnit test framework
-    testImplementation 'junit:junit:4.12'
-
     // https://mvnrepository.com/artifact/org.apache.commons/commons-math3
     compile group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
 
     // Patched in personal repo.  See settings.gradle
     implementation 'me.tongfei:progressbar:0.7.3'
+
+    // https://mvnrepository.com/artifact/jgrapht/jgrapht
+    implementation group: 'jgrapht', name: 'jgrapht', version: '0.7.3'
+
+    // https://mvnrepository.com/artifact/org.assertj/assertj-core
+    testCompile group: 'org.assertj', name: 'assertj-core', version: '3.12.2'
 }
 
 spotless {
@@ -40,6 +43,12 @@ spotless {
         googleJavaFormat('1.6')
         removeUnusedImports()
         replaceRegex 'Bug in google format javadoc: https://github.com/google/google-java-format/issues/254', '  \\* (<p>)+', '  * <p>'
+    }
+}
+
+test {
+    beforeTest { descriptor ->
+        logger.lifecycle("Running test: ${descriptor}")
     }
 }
 

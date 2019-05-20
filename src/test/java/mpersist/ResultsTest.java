@@ -1,4 +1,4 @@
-import static org.junit.Assert.*;
+package mpersist;
 
 import java.math.BigInteger;
 import java.util.HashMap;

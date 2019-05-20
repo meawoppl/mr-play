@@ -1,4 +1,7 @@
+package mpersist.forms;
+
 import java.util.Objects;
+import mpersist.PureFuncs;
 
 public class SENPlausible {
   final String prefix;

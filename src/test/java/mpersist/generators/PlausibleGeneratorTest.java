@@ -1,11 +1,12 @@
+package mpersist.generators;
+
 import java.math.BigInteger;
-import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Stream;
-import junit.framework.TestCase;
+import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
-public class PlausibleGeneratorTest extends TestCase {
+public class PlausibleGeneratorTest {
   private class TestClass extends PlausibleGenerator {
     private final int n;
     private AtomicInteger m = new AtomicInteger(0);
@@ -15,7 +16,7 @@ public class PlausibleGeneratorTest extends TestCase {
     }
 
     @Override
-    int size() {
+    public int size() {
       return n;
     }
 
@@ -33,23 +34,22 @@ public class PlausibleGeneratorTest extends TestCase {
   @Test
   public void testTestClassImpl() {
     TestClass t = new TestClass(3);
-    assertEquals(t.size(), 3);
-    assertEquals(t.toSet().size(), 3);
+    Assertions.assertThat(t.size()).isEqualTo(3);
+    Assertions.assertThat(t.toSet())
+        .containsExactlyInAnyOrder(new BigInteger("0"), new BigInteger("1"), new BigInteger("2"));
   }
 
   @Test
   public void testToParallelStream() {
     Stream<BigInteger> bigIntegerStream = new TestClass(3).toParallelStream();
-    assertTrue(bigIntegerStream.isParallel());
+    Assertions.assertThat(bigIntegerStream.isParallel()).isTrue();
   }
 
   @Test
   public void testToSet() {
     TestClass t = new TestClass(3);
-    assertEquals(t.size(), 3);
-    Set<BigInteger> set = t.toSet();
-    assertTrue(set.contains(BigInteger.valueOf(0)));
-    assertTrue(set.contains(BigInteger.valueOf(1)));
-    assertTrue(set.contains(BigInteger.valueOf(2)));
+    Assertions.assertThat(t.size()).isEqualTo(3);
+    Assertions.assertThat(t.toSet())
+        .containsExactlyInAnyOrder(new BigInteger("0"), new BigInteger("1"), new BigInteger("2"));
   }
 }

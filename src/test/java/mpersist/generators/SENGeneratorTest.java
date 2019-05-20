@@ -1,5 +1,8 @@
+package mpersist.generators;
+
 import java.math.BigInteger;
 import java.util.*;
+import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
 public class SENGeneratorTest extends GeneratorTestHelpers {
@@ -21,7 +24,7 @@ public class SENGeneratorTest extends GeneratorTestHelpers {
       SENGenerator pg = new SENGenerator(i);
       // Make sure the size math is right
       int expectedSize = ((i + 1) * (i + 2)) / 2;
-      assertEquals(expectedSize, pg.size());
+      Assertions.assertThat(pg.size()).isEqualTo(expectedSize);
 
       // Make sure the generator produces that many things.
       exhaustGeneratorAssertSize(pg, expectedSize);
@@ -32,7 +35,6 @@ public class SENGeneratorTest extends GeneratorTestHelpers {
   public void testPrefixNullGen() {
     SENGenerator pg = new SENGenerator("1", 0);
     Set<BigInteger> things = exhaustGeneratorAssertSize(pg, 1);
-    assertEquals(1, things.size());
-    assertEquals(things.toArray()[0], new BigInteger("1"));
+    Assertions.assertThat(things).containsExactly(new BigInteger("1"));
   }
 }

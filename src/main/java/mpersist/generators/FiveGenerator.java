@@ -1,10 +1,13 @@
+package mpersist.generators;
+
 import java.math.BigInteger;
 
 public class FiveGenerator extends PlausibleGenerator {
 
   //
   //            for (int i = 1; i <= nDigits; i++) {
-  //        dirtyAppendIterator(new SENGenerator(PureFuncs.nCharactersOf(i, "5"), nDigits - i));
+  //        dirtyAppendIterator(new
+  // mpersist.generators.SENGenerator(mpersist.PureFuncs.nCharactersOf(i, "5"), nDigits - i));
   //    }
 
   @Override
@@ -18,7 +21,7 @@ public class FiveGenerator extends PlausibleGenerator {
   }
 
   @Override
-  int size() {
+  public int size() {
     return 0;
   }
 }
