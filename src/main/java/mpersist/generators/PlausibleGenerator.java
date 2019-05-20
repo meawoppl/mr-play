@@ -4,9 +4,10 @@ import java.math.BigInteger;
 import java.util.*;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
+import mpersist.forms.DigitalBigInteger;
 
-public abstract class PlausibleGenerator implements Iterator<BigInteger> {
-  public abstract int size();
+public abstract class PlausibleGenerator implements Iterator<DigitalBigInteger> {
+  public abstract long size();
 
   public Stream<BigInteger> toParallelStream() {
     int properties =

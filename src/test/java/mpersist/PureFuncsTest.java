@@ -28,7 +28,7 @@ public class PureFuncsTest {
 
   @Test
   public void testNCharsOf() {
-    Assertions.assertThat(PureFuncs.nCharactersOf(5, "")).isEqualTo("");
+    Assertions.assertThat(PureFuncs.nCharactersOf(5, "1")).isEqualTo("11111");
 
     Assertions.assertThat(PureFuncs.nCharactersOf(5, "a")).isEqualTo("aaaaa");
   }

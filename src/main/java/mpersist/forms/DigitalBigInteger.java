@@ -2,15 +2,22 @@ package mpersist.forms;
 
 import com.google.common.annotations.VisibleForTesting;
 import java.math.BigInteger;
+import java.util.Arrays;
 import java.util.Random;
 import mpersist.PureFuncs;
-import org.apache.commons.lang.StringUtils;
 
 public class DigitalBigInteger extends BigInteger {
+  private final int[] digitCount;
+
   public static DigitalBigInteger ONE = new DigitalBigInteger("1");
+
+  public DigitalBigInteger(long value) {
+    this(BigInteger.valueOf(value));
+  }
 
   public DigitalBigInteger(String number) {
     super(number);
+    digitCount = PureFuncs.digitHistogram(toString());
   }
 
   public DigitalBigInteger(int[] nDigits) {
@@ -19,13 +26,15 @@ public class DigitalBigInteger extends BigInteger {
 
   public DigitalBigInteger(int bitSize, Random random) {
     super(bitSize, random);
+    digitCount = PureFuncs.digitHistogram(toString());
   }
 
-  public DigitalBigInteger(BigInteger bi){
+  public DigitalBigInteger(BigInteger bi) {
     super(bi.toString());
+    digitCount = PureFuncs.digitHistogram(toString());
   }
 
-  public static DigitalBigInteger fromValue(long value) {
+  public static DigitalBigInteger fromLong(long value) {
     return new DigitalBigInteger(BigInteger.valueOf(value).toString());
   }
 
@@ -59,59 +68,60 @@ public class DigitalBigInteger extends BigInteger {
   }
 
   public int nOfDigit(int digit) {
-    // TODO(meawoppl) optimize to precompute/store once
     assertValidDigit(digit);
-    return StringUtils.countMatches(this.toString(), Integer.toString(digit));
+    return digitCount[digit];
   }
 
   public int nDigits() {
-    // TODO(meawoppl) also faster with above todo addressed.
     assert (signum() >= 0);
-    return toString().length();
+    int total = 0;
+    for (int count : digitCount) {
+      total += count;
+    }
+    return total;
   }
 
-  public int[] getDigitArray(){
+  public int[] getDigitArray() {
     return PureFuncs.stringToIntElements(toString());
   }
 
-  public DigitalBigInteger getDigitProduct(){
-    return PureFuncs.product(getDigitArray());
+  public DigitalBigInteger getDigitProduct() {
+    return product(getDigitArray());
   }
 
-  public int[] getDigitHistorgram() {
-    int[] digits = new int[10];
-    for (int i = 0; i < digits.length; i++) {
-      digits[i] = nOfDigit(i);
+  /**
+   * Compute the product of a array of integers in BigInteger space.
+   *
+   * @param ints Array of integers.
+   * @return BigInteger computed product
+   */
+  private static DigitalBigInteger product(int[] ints) {
+    assert (ints.length > 0);
+
+    DigitalBigInteger newValue = DigitalBigInteger.ONE;
+    for (int i : ints) {
+      newValue = newValue.multiply(BigInteger.valueOf(i));
     }
-    return digits;
+    return newValue;
+  }
+
+  public int[] getDigitCount() {
+    return Arrays.copyOf(digitCount, 10);
   }
 
   public boolean containsZeros() {
     return nOfDigit(0) != 0;
   }
 
-  public DigitalBigInteger incrementDigit(int digit, int increment) {
-    assertValidDigit(digit);
-
-    int[] digits = getDigitHistorgram();
-    digits[digit] += increment;
-
-    return new DigitalBigInteger(digits);
-  }
-
-  public DigitalBigInteger setDigit(int digit, int value) {
-    assertValidDigit(digit);
-    assert (value >= 0);
-
-    int[] digits = getDigitHistorgram();
-    digits[digit] = value;
-
-    return new DigitalBigInteger(digits);
-  }
-
   public DigitalBigInteger multiply(BigInteger bigInteger) {
     return new DigitalBigInteger(bigInteger.multiply(this));
   }
+
+  public DigitalBigInteger trimSEN() {
+    int[] count = getDigitCount();
+    count[7] = 0;
+    count[8] = 0;
+    count[9] = 0;
+    return new DigitalBigInteger(count);
+  }
 }
-
-

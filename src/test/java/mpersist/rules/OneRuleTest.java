@@ -1,27 +1,27 @@
 package mpersist.rules;
 
 import java.math.BigInteger;
-import junit.framework.TestCase;
 import mpersist.forms.DigitalBigInteger;
 import mpersist.rules.base.Rule;
+import mpersist.rules.base.TerminationCase;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
-public class OneRuleTest extends TestCase {
+public class OneRuleTest {
   private static Rule rule = Rules.ONE_RULE;
 
   @Test
   public void testApplyImpl() {
-    assertTrue(rule.applies(new DigitalBigInteger("111")));
-    assertTrue(rule.applies(new DigitalBigInteger("321")));
-    assertTrue(rule.applies(new DigitalBigInteger("131")));
-    assertTrue(rule.applies(new DigitalBigInteger("123")));
+    Assertions.assertThat(rule.applies(new DigitalBigInteger("111"))).isTrue();
+    Assertions.assertThat(rule.applies(new DigitalBigInteger("321"))).isTrue();
+    Assertions.assertThat(rule.applies(new DigitalBigInteger("131"))).isTrue();
+    Assertions.assertThat(rule.applies(new DigitalBigInteger("123"))).isTrue();
 
-    assertFalse(rule.applies(new DigitalBigInteger("1")));
+    Assertions.assertThat(rule.applies(new DigitalBigInteger("1"))).isFalse();
   }
 
   @Test
-  public void testApplication() {
+  public void testApplication() throws TerminationCase {
     Assertions.assertThat(rule.apply(new DigitalBigInteger("111"))).isEqualTo(new BigInteger("11"));
     Assertions.assertThat(rule.apply(new DigitalBigInteger("321"))).isEqualTo(new BigInteger("23"));
     Assertions.assertThat(rule.apply(new DigitalBigInteger("111"))).isEqualTo(new BigInteger("11"));

@@ -1,6 +1,6 @@
 package mpersist.generators;
 
-import java.math.BigInteger;
+import mpersist.forms.DigitalBigInteger;
 import mpersist.forms.SENPlausible;
 
 /**
@@ -19,7 +19,7 @@ public class SENGenerator extends PlausibleGenerator {
 
   public SENGenerator(String prefix, int nDigits) {
     assert (nDigits > 0 || !prefix.equals(""));
-    this.nDigits = nDigits;
+    this.nDigits = nDigits - prefix.length();
     this.prefix = prefix;
   }
 
@@ -28,7 +28,7 @@ public class SENGenerator extends PlausibleGenerator {
   }
 
   @Override
-  public BigInteger next() {
+  public DigitalBigInteger next() {
     int n = nDigits - (s + e);
     SENPlausible p = new SENPlausible(prefix, s, e, n);
 
@@ -47,7 +47,7 @@ public class SENGenerator extends PlausibleGenerator {
   }
 
   @Override
-  public int size() {
+  public long size() {
     return ((nDigits + 1) * (nDigits + 2)) / 2;
   }
 }

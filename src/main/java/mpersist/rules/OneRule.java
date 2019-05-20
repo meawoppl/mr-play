@@ -10,14 +10,14 @@ public class OneRule extends Rule {
   }
 
   @Override
-  protected DigitalBigInteger applyImpl(DigitalBigInteger digitalBigInteger) {
-    int[] digits = digitalBigInteger.getDigitHistorgram();
+  public DigitalBigInteger applyImpl(DigitalBigInteger digitalBigInteger) {
+    int[] digits = digitalBigInteger.getDigitCount();
     digits[1] -= 1;
     return new DigitalBigInteger(digits);
   }
 
   @Override
-  protected boolean appliesImpl(DigitalBigInteger digitalBigInteger) {
+  public boolean appliesImpl(DigitalBigInteger digitalBigInteger) {
     if (digitalBigInteger.containsZeros()) return false;
 
     return (digitalBigInteger.nOfDigit(1)) != 0 && (digitalBigInteger.nDigits() > 1);

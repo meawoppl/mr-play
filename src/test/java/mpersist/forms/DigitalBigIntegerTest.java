@@ -1,20 +1,20 @@
 package mpersist.forms;
 
-import static org.junit.Assert.*;
-
+import java.math.BigInteger;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
 public class DigitalBigIntegerTest {
 
   @Test
-  public void assertValidDigit() {}
+  public void testConstructors() {
+    Assertions.assertThat(new DigitalBigInteger(23))
+        .isEqualTo(new DigitalBigInteger("23"))
+        .isEqualTo(new DigitalBigInteger(new BigInteger("23")));
+  }
 
   @Test
-  public void assertDigitsValid() {}
-
-  @Test
-  public void nOfDigit() {
+  public void testNOfDigit() {
     DigitalBigInteger dbi = new DigitalBigInteger("1123");
     Assertions.assertThat(dbi.nOfDigit(1)).isEqualTo(2);
     Assertions.assertThat(dbi.nOfDigit(2)).isEqualTo(1);
@@ -22,11 +22,30 @@ public class DigitalBigIntegerTest {
   }
 
   @Test
-  public void getDigitArray() {}
+  public void testGetDigitArray() {
+    {
+      DigitalBigInteger dbi = new DigitalBigInteger("1123");
+      Assertions.assertThat(dbi.getDigitCount())
+          .isEqualTo(new int[] {0, 2, 1, 1, 0, 0, 0, 0, 0, 0});
+    }
+
+    {
+      DigitalBigInteger dbi = new DigitalBigInteger("9999");
+      Assertions.assertThat(dbi.getDigitCount())
+          .isEqualTo(new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 4});
+    }
+  }
 
   @Test
-  public void containsZeros() {}
+  public void testContainsZeros() {
+    {
+      DigitalBigInteger dbi = new DigitalBigInteger("1123");
+      Assertions.assertThat(dbi.containsZeros()).isFalse();
+    }
 
-  @Test
-  public void incrementDigit() {}
+    {
+      DigitalBigInteger dbi = new DigitalBigInteger("1103");
+      Assertions.assertThat(dbi.containsZeros()).isTrue();
+    }
+  }
 }

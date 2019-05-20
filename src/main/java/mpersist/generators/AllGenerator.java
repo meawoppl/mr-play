@@ -1,6 +1,6 @@
 package mpersist.generators;
 
-import java.math.BigInteger;
+import mpersist.forms.DigitalBigInteger;
 
 public class AllGenerator extends PlausibleGenerator {
   PlausibleGenerator base;
@@ -13,16 +13,18 @@ public class AllGenerator extends PlausibleGenerator {
     base =
         new ConcatGenerator(
             new SENGenerator("", nDigits),
-            new SENGenerator("2", nDigits - 1),
-            new SENGenerator("3", nDigits - 1),
-            new SENGenerator("4", nDigits - 1),
-            new SENGenerator("6", nDigits - 1),
-            new SENGenerator("26", nDigits - 2),
-            new SENGenerator("35", nDigits - 2));
+            new SENGenerator("2", nDigits),
+            new SENGenerator("3", nDigits),
+            new SENGenerator("4", nDigits),
+            new SENGenerator("6", nDigits),
+            new SENGenerator("26", nDigits),
+            new SENGenerator("46", nDigits),
+            new SENGenerator("35", nDigits),
+            new SENGenerator("36", nDigits));
   }
 
   @Override
-  public int size() {
+  public long size() {
     return base.size();
   }
 
@@ -32,7 +34,7 @@ public class AllGenerator extends PlausibleGenerator {
   }
 
   @Override
-  public BigInteger next() {
+  public DigitalBigInteger next() {
     return base.next();
   }
 

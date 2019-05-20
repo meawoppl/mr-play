@@ -1,7 +1,5 @@
 package mpersist;
 
-import mpersist.forms.DigitalBigInteger;
-
 import java.math.BigInteger;
 import java.util.Arrays;
 
@@ -20,8 +18,7 @@ public class PureFuncs {
   /**
    * Sort a string of digits.
    *
-   * Example
-   * "0123" == sortedDigitString("1302")
+   * <p>Example "0123" == sortedDigitString("1302")
    */
   public static String sortedDigitString(String input) {
     char[] chars = input.toCharArray();
@@ -34,9 +31,8 @@ public class PureFuncs {
   }
 
   /**
-   * Transform a string into an array of integer elements.
-   * Example:
-   * new int[]{1, 2, 3} == stringToIntElements("123")
+   * Transform a string into an array of integer elements. Example: new int[]{1, 2, 3} ==
+   * stringToIntElements("123")
    *
    * @param string Input string
    * @return Array of integers.
@@ -59,7 +55,7 @@ public class PureFuncs {
    * @return String of repeated characters
    */
   public static String nCharactersOf(int n, String s) {
-    assert(n>=0);
+    assert (n >= 0);
     assert (s.length() == 1);
 
     StringBuilder sb = new StringBuilder();
@@ -71,19 +67,11 @@ public class PureFuncs {
     return sb.toString();
   }
 
-  /**
-   * Compute the product of a array of integers in BigInteger space.
-   *
-   * @param ints Array of integers.
-   * @return BigInteger computed product
-   */
-  public static DigitalBigInteger product(int[] ints) {
-    assert (ints.length > 0);
-
-    DigitalBigInteger newValue = DigitalBigInteger.ONE;
-    for (int i : ints) {
-      newValue = newValue.multiply(BigInteger.valueOf(i));
+  public static int[] digitHistogram(String number) {
+    int[] hist = new int[10];
+    for (int i : stringToIntElements(number)) {
+      hist[i] += 1;
     }
-    return newValue;
+    return hist;
   }
 }

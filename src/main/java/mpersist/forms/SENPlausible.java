@@ -21,14 +21,14 @@ public class SENPlausible {
     this("", sevens, eights, nines);
   }
 
-  public java.math.BigInteger asBigInteger() {
+  public DigitalBigInteger asBigInteger() {
     String s =
         prefix
             + PureFuncs.nCharactersOf(sevens, "7")
             + PureFuncs.nCharactersOf(eights, "8")
             + PureFuncs.nCharactersOf(nines, "9");
 
-    return new java.math.BigInteger(s);
+    return new DigitalBigInteger(s);
   }
 
   public int nDigits() {

@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
 
 public class GeneratorTestHelpers {
-  public <T> Set<T> exhaustGeneratorAssertSize(@NotNull Iterator<T> gen, int size) {
+  public <T> Set<T> exhaustGeneratorAssertSize(@NotNull Iterator<T> gen, long size) {
     HashSet<T> set = new HashSet<>();
     gen.forEachRemaining(set::add);
     Assertions.assertThat(set).size().isEqualTo(size);
@@ -18,7 +18,7 @@ public class GeneratorTestHelpers {
 
   @Test
   public void testExhaustGeneratorAssertSize() {
-    Set<Integer> r = exhaustGeneratorAssertSize(Iterators.forArray(new Integer[] {1, 2, 3}), 3);
+    Set<Integer> r = exhaustGeneratorAssertSize(Iterators.forArray(1, 2, 3), 3);
     Assertions.assertThat(r).containsExactlyInAnyOrder(1, 2, 3);
   }
 }

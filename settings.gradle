@@ -16,9 +16,3 @@ include 'services:webservice'
 */
 
 rootProject.name = 'mr-play'
-
-sourceControl {
-    gitRepository("ssh://git@github.com/meawoppl/progressbar.git") {
-        producesModule("me.tongfei.progressbar:progressbar")
-    }
-}

@@ -8,7 +8,7 @@ import mpersist.generators.AllGenerator;
 public class MiningEntryPoint {
   public static void main(String[] args) {
 
-    for (int i = 1000; i < 1001; i++) {
+    for (int i = 2; i < 100; i++) {
       long start = System.currentTimeMillis();
       Map<BigInteger, Integer> results = new HashMap<>();
       String task = String.format("%d digits.", i);

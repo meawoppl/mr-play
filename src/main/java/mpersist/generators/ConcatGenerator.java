@@ -1,17 +1,24 @@
 package mpersist.generators;
 
 import com.google.common.collect.Iterators;
-import java.math.BigInteger;
-import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
+import mpersist.forms.DigitalBigInteger;
 
 public class ConcatGenerator extends PlausibleGenerator {
   private int size;
-  Iterator<BigInteger> base = Collections.emptyIterator();
+  private final Iterator<DigitalBigInteger> base;
+
+  public ConcatGenerator(List<PlausibleGenerator> generators) {
+    base = Iterators.concat(generators.iterator());
+    for (PlausibleGenerator g : generators) {
+      size += g.size();
+    }
+  }
 
   public ConcatGenerator(PlausibleGenerator... generators) {
+    base = Iterators.concat(Iterators.forArray(generators));
     for (PlausibleGenerator g : generators) {
-      base = Iterators.concat(base, g);
       size += g.size();
     }
   }
@@ -22,12 +29,12 @@ public class ConcatGenerator extends PlausibleGenerator {
   }
 
   @Override
-  public BigInteger next() {
+  public DigitalBigInteger next() {
     return base.next();
   }
 
   @Override
-  public int size() {
+  public long size() {
     return size;
   }
 }

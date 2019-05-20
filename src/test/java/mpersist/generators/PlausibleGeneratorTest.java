@@ -3,6 +3,7 @@ package mpersist.generators;
 import java.math.BigInteger;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Stream;
+import mpersist.forms.DigitalBigInteger;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
@@ -16,7 +17,7 @@ public class PlausibleGeneratorTest {
     }
 
     @Override
-    public int size() {
+    public long size() {
       return n;
     }
 
@@ -26,8 +27,8 @@ public class PlausibleGeneratorTest {
     }
 
     @Override
-    public BigInteger next() {
-      return BigInteger.valueOf(m.getAndIncrement());
+    public DigitalBigInteger next() {
+      return new DigitalBigInteger(m.getAndIncrement());
     }
   }
 

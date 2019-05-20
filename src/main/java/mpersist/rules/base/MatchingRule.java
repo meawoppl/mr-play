@@ -15,6 +15,10 @@ public abstract class MatchingRule extends Rule {
     assert (transformation.length == 10);
   }
 
+  public MatchingRule(String from) {
+    this(from, "");
+  }
+
   public MatchingRule(String from, String to) {
     this(ruleFromStrings(from, to));
   }
@@ -44,8 +48,8 @@ public abstract class MatchingRule extends Rule {
   }
 
   @Override
-  protected boolean appliesImpl(DigitalBigInteger digitalBigInteger) {
-    int[] transformed = applyTransform(digitalBigInteger.getDigitHistorgram());
+  public boolean appliesImpl(DigitalBigInteger digitalBigInteger) {
+    int[] transformed = applyTransform(digitalBigInteger.getDigitCount());
     for (int t : transformed) {
       if (t < 0) {
         return false;

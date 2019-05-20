@@ -10,12 +10,12 @@ public class ZeroRule extends Rule {
   }
 
   @Override
-  protected DigitalBigInteger applyImpl(DigitalBigInteger digitalBigInteger) {
+  public DigitalBigInteger applyImpl(DigitalBigInteger digitalBigInteger) {
     return new DigitalBigInteger("0");
   }
 
   @Override
-  protected boolean appliesImpl(DigitalBigInteger digitalBigInteger) {
+  public boolean appliesImpl(DigitalBigInteger digitalBigInteger) {
     return digitalBigInteger.nOfDigit(0) != 0;
   }
 }

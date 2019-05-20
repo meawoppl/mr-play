@@ -1,7 +1,7 @@
 package mpersist.generators;
 
-import java.math.BigInteger;
 import java.util.*;
+import mpersist.forms.DigitalBigInteger;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
@@ -33,8 +33,8 @@ public class SENGeneratorTest extends GeneratorTestHelpers {
 
   @Test
   public void testPrefixNullGen() {
-    SENGenerator pg = new SENGenerator("1", 0);
-    Set<BigInteger> things = exhaustGeneratorAssertSize(pg, 1);
-    Assertions.assertThat(things).containsExactly(new BigInteger("1"));
+    SENGenerator pg = new SENGenerator("1", 1);
+    Set<DigitalBigInteger> things = exhaustGeneratorAssertSize(pg, 1);
+    Assertions.assertThat(things).containsExactly(new DigitalBigInteger(1));
   }
 }

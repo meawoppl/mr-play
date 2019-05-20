@@ -10,13 +10,13 @@ public class SortRule extends Rule {
   }
 
   @Override
-  protected DigitalBigInteger applyImpl(DigitalBigInteger digitalBigInteger) {
-    int[] digits = digitalBigInteger.getDigitHistorgram();
+  public DigitalBigInteger applyImpl(DigitalBigInteger digitalBigInteger) {
+    int[] digits = digitalBigInteger.getDigitCount();
     return new DigitalBigInteger(digits);
   }
 
   @Override
-  protected boolean appliesImpl(DigitalBigInteger digitalBigInteger) {
+  public boolean appliesImpl(DigitalBigInteger digitalBigInteger) {
     if (digitalBigInteger.containsZeros()) return false;
 
     return !applyImpl(digitalBigInteger).equals(digitalBigInteger);
