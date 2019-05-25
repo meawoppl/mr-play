@@ -4,14 +4,44 @@ import java.math.BigInteger;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Results {
-  private Results() {}
+public class PersistenceResults  {
+  private final Map<BigInteger, Integer> results;
 
-  public static void printResults(Map<BigInteger, Integer> results) {
-    System.out.println(formatResults(results));
+  public PersistenceResults() {
+     results = new HashMap<>();
   }
 
-  public static String formatResults(Map<BigInteger, Integer> results) {
+  public void addResult(BigInteger bi, Integer i){
+    results.put(bi, i);
+  }
+
+  public void printResults() {
+    System.out.println(formatResults());
+  }
+
+  public void printSizes(){
+    System.out.println(formatSizes());
+  }
+
+  public String formatSizes(){
+    StringBuilder sb = new StringBuilder();
+
+    Map<Integer, List<BigInteger>> mapping = groupedOnValue(results);
+
+    Integer highest = mapping.keySet().stream().max(Integer::compareTo).orElse(0);
+
+    if (results.isEmpty()) {
+      sb.append("None Found.\n");
+    }
+
+    for (int i = 3; i <= highest; i++) {
+      if (!mapping.containsKey(i)) continue;
+      sb.append(String.format("Persistence of %d found %d\n", i, mapping.get(i).size()));
+    }
+    return sb.toString();
+  }
+
+  public String formatResults() {
     StringBuilder sb = new StringBuilder();
 
     Map<Integer, List<BigInteger>> mapping = groupedOnValue(results);
@@ -60,5 +90,9 @@ public class Results {
                     m.keySet().stream().filter(k -> m.get(k) == g).collect(Collectors.toList())));
 
     return ret;
+  }
+
+  public int size(){
+    return results.size();
   }
 }

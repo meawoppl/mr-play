@@ -15,10 +15,21 @@ dependencies {
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
     compile group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
     compile 'com.google.guava:guava:23.0'
-    compile 'me.tongfei:progressbar:0.7.3'
+    compile 'me.tongfei:progressbar:0.7.4'
     compile group: 'jgrapht', name: 'jgrapht', version: '0.7.3'
     testCompile group: 'org.assertj', name: 'assertj-core', version: '3.12.2'
 }
+
+task(runMining, dependsOn: 'classes', type: JavaExec){
+    main = 'mpersist.MiningEntryPoint'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task(runPrefix, dependsOn: 'classes', type: JavaExec){
+    main = 'mpersist.PrefixEntryPoint'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
 
 spotless {
     java {

@@ -14,13 +14,15 @@ public class AllGenerator extends PlausibleGenerator {
         new ConcatGenerator(
             new SENGenerator("", nDigits),
             new SENGenerator("2", nDigits),
+            new SENGenerator("26", nDigits),
             new SENGenerator("3", nDigits),
+            new FSENGenerator("35", nDigits),
+            new SENGenerator("36", nDigits),
             new SENGenerator("4", nDigits),
             new SENGenerator("6", nDigits),
-            new SENGenerator("26", nDigits),
             new SENGenerator("46", nDigits),
-            new SENGenerator("35", nDigits),
-            new SENGenerator("36", nDigits));
+            new FSENGenerator("", nDigits),
+            new SENGenerator("6", nDigits));
   }
 
   @Override

@@ -21,7 +21,6 @@ public class FSENGenerator extends PlausibleGenerator {
     this.generator = builder.build();
   }
 
-
   @Override
   public long size() {
     return generator.size();

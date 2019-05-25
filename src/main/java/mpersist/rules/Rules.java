@@ -1,6 +1,8 @@
 package mpersist.rules;
 
 import com.google.common.collect.Lists;
+
+import java.math.BigInteger;
 import java.util.List;
 import mpersist.forms.DigitalBigInteger;
 import mpersist.rules.base.*;
@@ -19,6 +21,7 @@ public class Rules {
   public static Rule THREE_THREE = new ReplacementRule("33", "9");
   public static Rule THREE_FOUR = new ReplacementRule("34", "26");
   public static Rule FOUR_FOUR = new ReplacementRule("44", "28");
+  public static Rule FOUR_SIX = new ReplacementRule("46", "38");
 
   // These result in a 0 as the last digit in the next round
   public static Rule TWO_FIVE = new TerminalMatchingRule("25");
@@ -28,9 +31,7 @@ public class Rules {
   public static Rule DOUBLE_SIX = new ReplacementRule("66", "49");
   public static Rule SINGLE_DIGIT = new SingleDigitRule();
 
-  //  public static Rule TWO_SIX = new ReplacementRule("26", "")
-  //  public static Rule TWO_TWOS = new ReplacementRule("22", "4");
-  //  public static Rule TWO_TWOS = new ReplacementRule("22", "4");
+  public static Rule INTERESTING = new ReplacementRule("368", "289");
 
   public static List<Rule> RULES =
       Lists.newArrayList(
@@ -48,7 +49,9 @@ public class Rules {
           TWO_FOUR,
           THREE_THREE,
           THREE_FOUR,
-          FOUR_FOUR);
+          FOUR_FOUR,
+          FOUR_SIX,
+          INTERESTING);
 
   public static boolean terminates(DigitalBigInteger dbi) {
     try {
@@ -77,4 +80,13 @@ public class Rules {
     }
     return applyRepeated(transformed);
   }
+
+  public static DigitalBigInteger toMinimalForm(BigInteger dbi){
+    try{
+      return applyRepeated(new DigitalBigInteger(dbi));
+    } catch (TerminationCase t){
+      throw new AssertionError(String.format("toMinimalForm(%s) called on terminating case.", dbi.toString()));
+    }
+  }
+
 }

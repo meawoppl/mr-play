@@ -10,14 +10,12 @@ public class ConcatGenerator extends PlausibleGenerator {
   private final Iterator<DigitalBigInteger> base;
 
   public ConcatGenerator(List<PlausibleGenerator> generators) {
-    base = Iterators.concat(generators.iterator());
-    for (PlausibleGenerator g : generators) {
-      size += g.size();
-    }
+    this(generators.toArray(new PlausibleGenerator[0]));
   }
 
   public ConcatGenerator(PlausibleGenerator... generators) {
     base = Iterators.concat(Iterators.forArray(generators));
+
     for (PlausibleGenerator g : generators) {
       size += g.size();
     }
