@@ -26,10 +26,6 @@ public class PureFuncs {
     return new String(chars);
   }
 
-  public static BigInteger sortedBigInteger(BigInteger bi) {
-    return new BigInteger(sortedDigitString(bi.toString()));
-  }
-
   /**
    * Transform a string into an array of integer elements. Example: new int[]{1, 2, 3} ==
    * stringToIntElements("123")
