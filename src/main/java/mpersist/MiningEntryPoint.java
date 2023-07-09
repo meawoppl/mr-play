@@ -1,6 +1,5 @@
 package mpersist;
 
-import java.math.BigInteger;
 import java.util.*;
 import me.tongfei.progressbar.ProgressBar;
 import mpersist.generators.AllGenerator;
@@ -38,7 +37,7 @@ public class MiningEntryPoint {
 
     results.printSizes();
     System.out.println(
-            String.format("%.01fk/second", (totalSearched * 1.0) / (System.currentTimeMillis() - start)));
-
+        String.format(
+            "%.01fk/second", (totalSearched * 1.0) / (System.currentTimeMillis() - start)));
   }
 }

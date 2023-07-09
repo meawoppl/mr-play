@@ -1,7 +1,6 @@
 package mpersist.rules;
 
 import com.google.common.collect.Lists;
-
 import java.math.BigInteger;
 import java.util.List;
 import mpersist.forms.DigitalBigInteger;
@@ -81,12 +80,12 @@ public class Rules {
     return applyRepeated(transformed);
   }
 
-  public static DigitalBigInteger toMinimalForm(BigInteger dbi){
-    try{
+  public static DigitalBigInteger toMinimalForm(BigInteger dbi) {
+    try {
       return applyRepeated(new DigitalBigInteger(dbi));
-    } catch (TerminationCase t){
-      throw new AssertionError(String.format("toMinimalForm(%s) called on terminating case.", dbi.toString()));
+    } catch (TerminationCase t) {
+      throw new AssertionError(
+          String.format("toMinimalForm(%s) called on terminating case.", dbi.toString()));
     }
   }
-
 }

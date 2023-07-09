@@ -63,9 +63,16 @@ public class PureFuncs {
     return sb.toString();
   }
 
-  public static int[] digitHistogram(String number) {
+  /**
+   * Return an int array which describes the number of times a particular digit occurs in the
+   * stringFormed Number specified.
+   *
+   * @param number
+   * @return
+   */
+  public static int[] digitHistogram(BigInteger number) {
     int[] hist = new int[10];
-    for (int i : stringToIntElements(number)) {
+    for (int i : stringToIntElements(number.toString())) {
       hist[i] += 1;
     }
     return hist;

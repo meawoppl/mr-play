@@ -17,7 +17,7 @@ public class DigitalBigInteger extends BigInteger {
 
   public DigitalBigInteger(String number) {
     super(number);
-    digitCount = PureFuncs.digitHistogram(toString());
+    digitCount = PureFuncs.digitHistogram(this);
   }
 
   public DigitalBigInteger(int[] nDigits) {
@@ -26,12 +26,12 @@ public class DigitalBigInteger extends BigInteger {
 
   public DigitalBigInteger(int bitSize, Random random) {
     super(bitSize, random);
-    digitCount = PureFuncs.digitHistogram(toString());
+    digitCount = PureFuncs.digitHistogram(this);
   }
 
   public DigitalBigInteger(BigInteger bi) {
     super(bi.toString());
-    digitCount = PureFuncs.digitHistogram(toString());
+    digitCount = PureFuncs.digitHistogram(this);
   }
 
   public static DigitalBigInteger fromLong(long value) {

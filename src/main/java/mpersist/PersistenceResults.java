@@ -4,14 +4,14 @@ import java.math.BigInteger;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class PersistenceResults  {
+public class PersistenceResults {
   private final Map<BigInteger, Integer> results;
 
   public PersistenceResults() {
-     results = new HashMap<>();
+    results = new HashMap<>();
   }
 
-  public void addResult(BigInteger bi, Integer i){
+  public void addResult(BigInteger bi, Integer i) {
     results.put(bi, i);
   }
 
@@ -19,11 +19,11 @@ public class PersistenceResults  {
     System.out.println(formatResults());
   }
 
-  public void printSizes(){
+  public void printSizes() {
     System.out.println(formatSizes());
   }
 
-  public String formatSizes(){
+  public String formatSizes() {
     StringBuilder sb = new StringBuilder();
 
     Map<Integer, List<BigInteger>> mapping = groupedOnValue(results);
@@ -92,7 +92,7 @@ public class PersistenceResults  {
     return ret;
   }
 
-  public int size(){
+  public int size() {
     return results.size();
   }
 }

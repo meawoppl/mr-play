@@ -1,8 +1,6 @@
 package mpersist;
 
 import java.math.BigInteger;
-import java.util.HashMap;
-import java.util.Map;
 import org.junit.Test;
 
 public class PersistenceResultsTest {
